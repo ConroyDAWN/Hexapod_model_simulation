@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="hexapod_complete_urdf">
+<mujoco>
+  <compiler
+  meshdir="meshes/"
+  balanceinertia="true"
+  discardvisual="false" />
+</mujoco>
+
+  <link
+    name="body">
+    <inertial>
+      <origin
+        xyz="0.000267795488204884 8.6753217990454E-06 0.00796887377561833"
+        rpy="0 0 0" />
+      <mass
+        value="0.163675340720187" />
+      <inertia
+        ixx="0.000348426224346752"
+        ixy="3.07038500458581E-07"
+        ixz="2.40288323845279E-07"
+        iyy="0.000348738480928922"
+        iyz="8.13206051597924E-09"
+        izz="0.000685386918070708" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="haunch1">
+    <inertial>
+      <origin
+        xyz="-0.0193219744906117 -0.0147390471726023 0.0229344937798081"
+        rpy="0 0 0" />
+      <mass
+        value="0.0165574984042957" />
+      <inertia
+        ixx="8.5188384371587E-06"
+        ixy="-1.34835741851146E-06"
+        ixz="-6.62520569881823E-07"
+        iyy="9.25794408182704E-06"
+        iyz="-5.0538023852474E-07"
+        izz="3.52719595889137E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_haunch1"
+    type="revolute">
+    <origin
+      xyz="-0.075469 -0.020618 -0.0088"
+      rpy="0 0 -0.20877" />
+    <parent
+      link="body" />
+    <child
+      link="haunch1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thigh1">
+    <inertial>
+      <origin
+        xyz="-0.0357551854813318 -0.0147870618037974 -0.0259178672203169"
+        rpy="0 0 0" />
+      <mass
+        value="0.0266777976712455" />
+      <inertia
+        ixx="1.86629104262242E-05"
+        ixy="1.25378833321563E-07"
+        ixz="-6.43892384111097E-06"
+        iyy="1.85943099920452E-05"
+        iyz="-4.91179943837406E-06"
+        izz="2.48312858430707E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_thigh1"
+    type="revolute">
+    <origin
+      xyz="-0.030819 -0.027282 0.01015"
+      rpy="0 0 0" />
+    <parent
+      link="haunch1" />
+    <child
+      link="thigh1" />
+    <axis
+      xyz="0.6065 -0.79508 0" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="calf1">
+    <inertial>
+      <origin
+        xyz="0.00826228725294531 0.00630257636762288 -0.0312450814465801"
+        rpy="0 0 0" />
+      <mass
+        value="0.0333887237767673" />
+      <inertia
+        ixx="4.13298042441007E-05"
+        ixy="-1.98700689179557E-05"
+        ixz="2.2122952390142E-05"
+        iyy="5.2221096053073E-05"
+        iyz="1.68756656176182E-05"
+        izz="4.17620462234045E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_calf1"
+    type="revolute">
+    <origin
+      xyz="-0.059467 -0.045362 -0.051836"
+      rpy="0 0 0" />
+    <parent
+      link="thigh1" />
+    <child
+      link="calf1" />
+    <axis
+      xyz="0.6065 -0.79508 0" />
+    <limit
+      lower="-90"
+      upper="30"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="haunch2">
+    <inertial>
+      <origin
+        xyz="0.00499508048909855 -0.0237829220382511 0.0229344937797236"
+        rpy="0 0 0" />
+      <mass
+        value="0.0165574984042958" />
+      <inertia
+        ixx="1.01683489487419E-05"
+        ixy="5.62445846533116E-07"
+        ixz="1.71274605768489E-07"
+        iyy="7.60843357024387E-06"
+        iyz="-8.15480042935863E-07"
+        izz="3.52719595889136E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_haunch2"
+    type="revolute">
+    <origin
+      xyz="-0.019879 -0.075667 -0.0088"
+      rpy="0 0 -0.20877" />
+    <parent
+      link="body" />
+    <child
+      link="haunch2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thigh2">
+    <inertial>
+      <origin
+        xyz="-0.00152906565825764 -0.0410236613280487 -0.0219897134203609"
+        rpy="0 0 0" />
+      <mass
+        value="0.0266777976712455" />
+      <inertia
+        ixx="1.84431967724743E-05"
+        ixy="2.63955462240623E-07"
+        ixz="1.50441367017885E-06"
+        iyy="1.72416213144695E-05"
+        iyz="-7.16247813210364E-06"
+        izz="2.64036881743962E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_thigh2"
+    type="revolute">
+    <origin
+      xyz="0.011374 -0.039557 0.01015"
+      rpy="0 0 0" />
+    <parent
+      link="haunch2" />
+    <child
+      link="thigh2" />
+    <axis
+      xyz="0.97865 0.20554 0" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="calf2">
+    <inertial>
+      <origin
+        xyz="0.0031942560199251 -0.015208718782266 -0.029029891069989"
+        rpy="0 0 0" />
+      <mass
+        value="0.0333887237767673" />
+      <inertia
+        ixx="6.71583895809499E-05"
+        ixy="1.04673837502552E-06"
+        ixz="-1.28891605117636E-06"
+        iyy="6.23944287510162E-05"
+        iyz="6.13687870809351E-06"
+        izz="5.76012818861243E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_calf2"
+    type="revolute">
+    <origin
+      xyz="0.016375 -0.077966 -0.043979"
+      rpy="0 0 0" />
+    <parent
+      link="thigh2" />
+    <child
+      link="calf2" />
+    <axis
+      xyz="0.97865 0.20554 0" />
+    <limit
+      lower="-90"
+      upper="30"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="haunch3">
+    <inertial>
+      <origin
+        xyz="0.0199536438221095 0.0138719251724333 0.0229344937796847"
+        rpy="0 0 0" />
+      <mass
+        value="0.0165574984042957" />
+      <inertia
+        ixx="8.40137663177412E-06"
+        ixy="-1.31051660383911E-06"
+        ixz="6.8417958320446E-07"
+        iyy="9.37540588721161E-06"
+        iyz="4.75647967444421E-07"
+        izz="3.52719595889136E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_haunch3"
+    type="revolute">
+    <origin
+      xyz="0.075469 0.020618 -0.0088"
+      rpy="0 0 -0.20877" />
+    <parent
+      link="body" />
+    <child
+      link="haunch3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thigh3">
+    <inertial>
+      <origin
+        xyz="0.0367628694738971 0.013465692849583 -0.0252188990833069"
+        rpy="0 0 0" />
+      <mass
+        value="0.0266777976712455" />
+      <inertia
+        ixx="1.84724950465534E-05"
+        ixy="-1.81075400984726E-08"
+        ixz="6.55225884463387E-06"
+        iyy="1.84860758297263E-05"
+        iyz="4.5552848926038E-06"
+        izz="2.51299353850601E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_thigh3"
+    type="revolute">
+    <origin
+      xyz="0.0319927280865342 0.0258953248595354 0.0101500000000014"
+      rpy="0 0 0" />
+    <parent
+      link="haunch3" />
+    <child
+      link="thigh3" />
+    <axis
+      xyz="-0.570818413422047 0.821076329520183 0" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="calf3">
+    <inertial>
+      <origin
+        xyz="0.000848036136673253 0.000589561073201184 -0.0329116427194393"
+        rpy="0 0 0" />
+      <mass
+        value="0.0333887237767673" />
+      <inertia
+        ixx="5.30059195893567E-05"
+        ixy="-9.99174054161334E-06"
+        ixz="-2.15483386223454E-05"
+        iyy="6.04319010416037E-05"
+        iyz="-1.49805663883602E-05"
+        izz="2.18751258896179E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_calf3"
+    type="revolute">
+    <origin
+      xyz="0.062191 0.043236 -0.050438"
+      rpy="0 0 0" />
+    <parent
+      link="thigh3" />
+    <child
+      link="calf3" />
+    <axis
+      xyz="-0.57082 0.82108 0" />
+    <limit
+      lower="-90"
+      upper="30"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="haunch4">
+    <inertial>
+      <origin
+        xyz="0.0219902615097881 -0.0103443998617869 0.0229344937796646"
+        rpy="0 0 0" />
+      <mass
+        value="0.0165574984042958" />
+      <inertia
+        ixx="7.99695790234626E-06"
+        ixy="1.07702534153859E-06"
+        ixz="7.54013014667541E-07"
+        iyy="9.77982461663951E-06"
+        iyz="-3.54692916083472E-07"
+        izz="3.52719595889136E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_haunch4"
+    type="revolute">
+    <origin
+      xyz="0.055591 -0.055049 -0.0088"
+      rpy="0 0 -0.20877" />
+    <parent
+      link="body" />
+    <child
+      link="haunch4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thigh4">
+    <inertial>
+      <origin
+        xyz="0.0280326245600574 -0.0241590036693181 -0.0282726162357837"
+        rpy="0 0 0" />
+      <mass
+        value="0.0266777976712455" />
+      <inertia
+        ixx="1.95845582371592E-05"
+        ixy="-5.10767748194809E-07"
+        ixz="7.62058887478203E-06"
+        iyy="1.87388632266481E-05"
+        iyz="-3.58469839056691E-06"
+        izz="2.37650847975327E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_thigh4"
+    type="revolute">
+    <origin
+      xyz="0.038422 -0.014759 0.01015"
+      rpy="0 0 0" />
+    <parent
+      link="haunch4" />
+    <child
+      link="thigh4" />
+    <axis
+      xyz="0.42566 0.90488 0" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="calf4">
+    <inertial>
+      <origin
+        xyz="-0.0186125957217062 0.00875552005686664 -0.0257129368813639"
+        rpy="0 0 0" />
+      <mass
+        value="0.0333887237767673" />
+      <inertia
+        ixx="2.03660495321575E-05"
+        ixy="2.21149231026946E-05"
+        ixz="-1.45559800343546E-05"
+        iyy="5.69751898663347E-05"
+        iyz="6.84725424916081E-06"
+        izz="5.7971707122086E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_calf4"
+    type="revolute">
+    <origin
+      xyz="0.064518 -0.03035 -0.056545"
+      rpy="0 0 0" />
+    <parent
+      link="thigh4" />
+    <child
+      link="calf4" />
+    <axis
+      xyz="0.42566 0.90488 0" />
+    <limit
+      lower="-90"
+      upper="30"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="haunch5">
+    <inertial>
+      <origin
+        xyz="-0.00203661768764064 0.0242163250342835 0.0229344937797286"
+        rpy="0 0 0" />
+      <mass
+        value="0.0165574984042957" />
+      <inertia
+        ixx="1.02668392443582E-05"
+        ixy="2.33491262300529E-07"
+        ixz="-6.98334314630957E-08"
+        iyy="7.50994327462752E-06"
+        iyz="8.30340883527919E-07"
+        izz="3.52719595889135E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_haunch5"
+    type="revolute">
+    <origin
+      xyz="0.019879 0.075667 -0.0088"
+      rpy="0 0 -0.20877" />
+    <parent
+      link="body" />
+    <child
+      link="haunch5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thigh5">
+    <inertial>
+      <origin
+        xyz="0.00661793358122476 0.0397816968057556 -0.0232904675979601"
+        rpy="0 0 0" />
+      <mass
+        value="0.0266777976712454" />
+      <inertia
+        ixx="1.84928718766086E-05"
+        ixy="6.84515385191493E-08"
+        ixz="-6.37549512118205E-07"
+        iyy="1.76840697181041E-05"
+        iyz="7.57969947923715E-06"
+        izz="2.59115646666272E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_thigh5"
+    type="revolute">
+    <origin
+      xyz="-0.0064296 0.040654 0.01015"
+      rpy="0 0 0" />
+    <parent
+      link="haunch5" />
+    <child
+      link="thigh5" />
+    <axis
+      xyz="-0.99648 -0.083805 0" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="calf5">
+    <inertial>
+      <origin
+        xyz="0.000701508943375478 -0.00834127401070195 -0.0318460987760458"
+        rpy="0 0 0" />
+      <mass
+        value="0.0333887237767673" />
+      <inertia
+        ixx="6.71142463630791E-05"
+        ixy="3.13893693894291E-06"
+        ixz="2.39619037282584E-06"
+        iyy="3.00547852578119E-05"
+        iyz="-2.84918397680095E-05"
+        izz="3.81439148996876E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_calf5"
+    type="revolute">
+    <origin
+      xyz="-0.00655141272371919 0.0778994038600545 -0.0465807027595338"
+      rpy="0 0 0" />
+    <parent
+      link="thigh5" />
+    <child
+      link="calf5" />
+    <axis
+      xyz="-0.996482166521584 -0.0838050822113381 0" />
+    <limit
+      lower="-90"
+      upper="30"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="haunch6">
+    <inertial>
+      <origin
+        xyz="-0.0219902615097905 0.0103443998618261 0.0229344937796997"
+        rpy="0 0 0" />
+      <mass
+        value="0.0165574984042958" />
+      <inertia
+        ixx="7.99695790234627E-06"
+        ixy="1.07702534153859E-06"
+        ixz="-7.54013014667538E-07"
+        iyy="9.77982461663952E-06"
+        iyz="3.54692916083468E-07"
+        izz="3.52719595889136E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/haunch6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_haunch6"
+    type="revolute">
+    <origin
+      xyz="-0.0555906522088054 0.0550491214109962 -0.00880000000000014"
+      rpy="0 0 -0.208770544653029" />
+    <parent
+      link="body" />
+    <child
+      link="haunch6" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thigh6">
+    <inertial>
+      <origin
+        xyz="-0.0321359361079968 0.0260892355972456 -0.0213415023647775"
+        rpy="0 0 0" />
+      <mass
+        value="0.0266777976712456" />
+      <inertia
+        ixx="1.72318665919243E-05"
+        ixy="5.95942148499094E-07"
+        ixz="-6.48407201810058E-06"
+        iyy="1.8218265128861E-05"
+        iyz="3.05005993544527E-06"
+        izz="2.66383745405549E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/thigh6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_thigh6"
+    type="revolute">
+    <origin
+      xyz="-0.038422 0.014759 0.01015"
+      rpy="0 0 0" />
+    <parent
+      link="haunch6" />
+    <child
+      link="thigh6" />
+    <axis
+      xyz="-0.42566 -0.90488 0" />
+    <limit
+      lower="-30"
+      upper="50"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="calf6">
+    <inertial>
+      <origin
+        xyz="-0.00357294522729301 0.00168074319363964 -0.0326902453164718"
+        rpy="0 0 0" />
+      <mass
+        value="0.0333887237767674" />
+      <inertia
+        ixx="5.35641941204402E-05"
+        ixy="6.49823937134345E-06"
+        ixz="2.14401202827038E-05"
+        iyy="6.43214079694736E-05"
+        iyz="-1.00856111619942E-05"
+        izz="1.74273444306653E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="F:/desktop_data_store/model_hexapod/hexapod_complete_urdf/meshes/calf6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jo_calf6"
+    type="revolute">
+    <origin
+      xyz="-0.072724 0.03421 -0.042683"
+      rpy="0 0 0" />
+    <parent
+      link="thigh6" />
+    <child
+      link="calf6" />
+    <axis
+      xyz="-0.42566 -0.90488 0" />
+    <limit
+      lower="-90"
+      upper="30"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
