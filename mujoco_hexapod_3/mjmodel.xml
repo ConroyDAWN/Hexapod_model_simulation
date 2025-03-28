@@ -1,0 +1,138 @@
+<mujoco model="hexapod_urdf_2">
+  <compiler angle="radian" meshdir="meshes/"/>
+
+  <asset>
+    <mesh name="body" file="body.STL"/>
+    <mesh name="haunch1" file="haunch1.STL"/>
+    <mesh name="thigh1" file="thigh1.STL"/>
+    <mesh name="calf1" file="calf1.STL"/>
+    <mesh name="haunch2" file="haunch2.STL"/>
+    <mesh name="thigh2" file="thigh2.STL"/>
+    <mesh name="calf2" file="calf2.STL"/>
+    <mesh name="haunch3" file="haunch3.STL"/>
+    <mesh name="thigh3" file="thigh3.STL"/>
+    <mesh name="calf3" file="calf3.STL"/>
+    <mesh name="haunch4" file="haunch4.STL"/>
+    <mesh name="thigh4" file="thigh4.STL"/>
+    <mesh name="calf4" file="calf4.STL"/>
+    <mesh name="haunch5" file="haunch5.STL"/>
+    <mesh name="thigh5" file="thigh5.STL"/>
+    <mesh name="calf5" file="calf5.STL"/>
+    <mesh name="haunch6" file="haunch6.STL"/>
+    <mesh name="thigh6" file="thigh6.STL"/>
+    <mesh name="calf6" file="calf6.STL"/>
+  </asset>
+
+  <worldbody>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="body"/>
+    <geom type="mesh" rgba="1 1 1 1" mesh="body"/>
+    <body name="haunch1" pos="-0.075469 -0.020618 -0.0088" quat="0.994557 0 0 -0.104196">
+      <inertial pos="-0.0315562 -0.0169133 0.020469" quat="0.96213 -0.0194545 0.0500179 0.267257" mass="0.0528585" diaginertia="1.69971e-05 1.66339e-05 9.1102e-06"/>
+      <joint name="jo_haunch1" pos="0 0 0" axis="0 0 -1" range="-30 50"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="haunch1"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="haunch1"/>
+      <body name="thigh1" pos="-0.0343654 -0.0226522 0.01015">
+        <inertial pos="-0.044559 -0.01354 -1.3528e-07" quat="-0.17831 0.684257 0.178304 0.684256" mass="0.026678" diaginertia="3.0444e-05 1.84989e-05 1.31461e-05"/>
+        <joint name="jo_thigh1" pos="0 0 0" axis="0.488032 -0.872826 0" range="-30 50"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="thigh1"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="thigh1"/>
+        <body name="calf1" pos="-0.0794271 -0.0444109 0">
+          <inertial pos="-0.000904365 0.00183918 -0.0205292" quat="0.495515 -0.134013 -0.23557 0.825235" mass="0.0696897" diaginertia="7.37256e-05 7.15779e-05 1.14467e-05"/>
+          <joint name="jo_calf1" pos="0 0 0" axis="0.488032 -0.872826 0" range="-90 30"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="calf1"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="calf1"/>
+        </body>
+      </body>
+    </body>
+    <body name="haunch2" pos="-0.019879 -0.075667 -0.0088" quat="0.994557 0 0 -0.104196">
+      <inertial pos="-0.00218988 -0.0357359 0.020469" quat="0.710074 -0.041355 0.0342056 0.702079" mass="0.0528585" diaginertia="1.69971e-05 1.66339e-05 9.1102e-06"/>
+      <joint name="jo_haunch2" pos="0 0 0" axis="0 0 -1" range="-30 50"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="haunch2"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="haunch2"/>
+      <body name="thigh2" pos="0.001217 -0.041141 0.01015">
+        <inertial pos="-0.0116467 -0.0393654 -0.0219897" quat="0.367126 0.595604 -0.622013 0.351532" mass="0.0266778" diaginertia="3.04439e-05 1.84986e-05 1.3146e-05"/>
+        <joint name="jo_thigh2" pos="0 0 0" axis="0.999059 -0.043367 0" range="-30 50"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="thigh2"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="thigh2"/>
+        <body name="calf2" pos="-0.00345492 -0.079592 -0.0439792">
+          <inertial pos="-0.0024392 -0.00899919 -0.0184042" quat="0.998589 0.0422872 0.000302993 -0.0321134" mass="0.0696897" diaginertia="7.37256e-05 7.15779e-05 1.14467e-05"/>
+          <joint name="jo_calf2" pos="0 0 0" axis="0.999059 -0.043367 0" range="-90 30"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="calf2"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="calf2"/>
+        </body>
+      </body>
+    </body>
+    <body name="haunch3" pos="0.075469 0.020618 -0.0088" quat="0.994557 0 0 -0.104196">
+      <inertial pos="0.0297565 0.0199099 0.020469" quat="0.947936 0.0218729 -0.0490086 0.313905" mass="0.0528585" diaginertia="1.69971e-05 1.66339e-05 9.1102e-06"/>
+      <joint name="jo_haunch3" pos="0 0 0" axis="0 0 -1" range="-30 50"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="haunch3"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="haunch3"/>
+      <body name="thigh3" pos="0.0319927 0.0258953 0.01015">
+        <inertial pos="0.0367629 0.0134657 -0.0252189" quat="-0.141201 0.841192 0.263677 0.45048" mass="0.0266778" diaginertia="3.04439e-05 1.84986e-05 1.3146e-05"/>
+        <joint name="jo_thigh3" pos="0 0 0" axis="-0.570818 0.821076 0" range="-30 50"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="thigh3"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="thigh3"/>
+        <body name="calf3" pos="0.0621911 0.0432357 -0.0504376">
+          <inertial pos="0.00114987 -0.00169323 -0.0205295" quat="0.454909 0.12144 0.240038 0.848936" mass="0.0696897" diaginertia="7.37256e-05 7.15779e-05 1.14467e-05"/>
+          <joint name="jo_calf3" pos="0 0 0" axis="-0.570818 0.821076 0" range="-90 30"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="calf3"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="calf3"/>
+        </body>
+      </body>
+    </body>
+    <body name="haunch4" pos="0.0555907 -0.0550491 -0.0088" quat="0.994557 0 0 -0.104196">
+      <inertial pos="0.0321207 -0.015815 0.020469" quat="0.977889 -0.00556175 -0.0533791 -0.20212" mass="0.0528585" diaginertia="1.69971e-05 1.66339e-05 9.1102e-06"/>
+      <joint name="jo_haunch4" pos="0 0 0" axis="0 0 -1" range="-30 50"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="haunch4"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="haunch4"/>
+      <body name="thigh4" pos="0.038422 -0.014759 0.01015">
+        <inertial pos="0.0280326 -0.024159 -0.0282726" quat="0.0948891 0.878711 -0.196352 0.424628" mass="0.0266778" diaginertia="3.04439e-05 1.84986e-05 1.3146e-05"/>
+        <joint name="jo_thigh4" pos="0 0 0" axis="0.425661 0.904883 0" range="-30 50"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="thigh4"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="thigh4"/>
+        <body name="calf4" pos="0.0645179 -0.0303497 -0.056545">
+          <inertial pos="-0.01294 0.0038254 -0.015607" quat="0.688788 0.490599 0.319429 0.427608" mass="0.06969" diaginertia="7.37257e-05 7.15778e-05 1.14465e-05"/>
+          <joint name="jo_calf4" pos="0 0 0" axis="0.425664 0.904881 0" range="-90 30"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="calf4"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="calf4"/>
+        </body>
+      </body>
+    </body>
+    <body name="haunch5" pos="0.019879 0.075667 -0.0088" quat="0.994557 0 0 -0.104196">
+      <inertial pos="-0.00236418 0.0357248 0.020469" quat="0.663985 0.0434468 -0.0315062 0.745818" mass="0.0528585" diaginertia="1.69971e-05 1.66339e-05 9.1102e-06"/>
+      <joint name="jo_haunch5" pos="0 0 0" axis="0 0 -1" range="-30 50"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="haunch5"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="haunch5"/>
+      <body name="thigh5" pos="-0.00642965 0.0406542 0.01015">
+        <inertial pos="0.00661793 0.0397817 -0.0232905" quat="0.588464 0.363671 -0.334373 0.640038" mass="0.0266778" diaginertia="3.04439e-05 1.84986e-05 1.3146e-05"/>
+        <joint name="jo_thigh5" pos="0 0 0" axis="-0.996482 -0.0838051 0" range="-30 50"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="thigh5"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="thigh5"/>
+        <body name="calf5" pos="-0.00655141 0.0778994 -0.0465807">
+          <inertial pos="0.0025306 -0.0056684 -0.019675" quat="0.404029 0.914021 0.0290848 0.0219172" mass="0.06969" diaginertia="7.37254e-05 7.15784e-05 1.14463e-05"/>
+          <joint name="jo_calf5" pos="0 0 0" axis="-0.996482 -0.0838051 0" range="-90 30"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="calf5"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="calf5"/>
+        </body>
+      </body>
+    </body>
+    <body name="haunch6" pos="-0.055591 0.055049 -0.0088" quat="0.994557 0 0 -0.104196">
+      <inertial pos="-0.032121 0.015815 0.020469" quat="0.977852 0.00555109 0.0533798 -0.2023" mass="0.052859" diaginertia="1.69973e-05 1.66343e-05 9.11024e-06"/>
+      <joint name="jo_haunch6" pos="0 0 0" axis="0 0 -1" range="-30 50"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="haunch6"/>
+      <geom type="mesh" rgba="1 1 1 1" mesh="haunch6"/>
+      <body name="thigh6" pos="-0.0384224 0.0147589 0.01015">
+        <inertial pos="-0.0321359 0.0260892 -0.0213415" quat="0.186901 0.502845 -0.112368 0.836414" mass="0.0266778" diaginertia="3.04439e-05 1.84986e-05 1.3146e-05"/>
+        <joint name="jo_thigh6" pos="0 0 0" axis="-0.425664 -0.904881 0" range="-30 50"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="thigh6"/>
+        <geom type="mesh" rgba="1 1 1 1" mesh="thigh6"/>
+        <body name="calf6" pos="-0.072724 0.03421 -0.042683">
+          <inertial pos="-0.00075668 0.0026177 -0.020451" quat="0.827747 -0.189111 -0.12371 0.513583" mass="0.06969" diaginertia="7.37259e-05 7.15782e-05 1.14459e-05"/>
+          <joint name="jo_calf6" pos="0 0 0" axis="-0.425661 -0.904883 0" range="-90 30"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="calf6"/>
+          <geom type="mesh" rgba="1 1 1 1" mesh="calf6"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
